@@ -1,0 +1,38 @@
+\begin{problem}{aaaadaa}{标准输入}{标准输出}{1 s}{256 MB}
+给定一个长度为 $N$ 的字符串 $S$，由小写英文字母组成，同时给定两个小写英文字母 $c_1$ 和 $c_2$。
+
+请找出将字符串 $S$ 中所有\textbf{不是} $c_1$ 的字符替换为 $c_2$ 后得到的新字符串。
+
+\InputFile
+第一行包含一个整数 $N$ $(1 \leq N \leq 10^5)$ 和两个小写英文字母 $c_1$、$c_2$。
+
+第二行包含一个长度为 $N$ 的字符串 $S$，仅由小写英文字母组成。
+
+\OutputFile
+输出替换后的新字符串。
+
+\Example
+
+\begin{example}
+\exmp{
+3 b g
+abc
+}{
+gbg
+} %
+\exmp{
+10 b a
+acaabcabba
+}{
+aaaabaabba
+} %
+\end{example}
+
+\Constraints
+\begin{itemize}
+\item $1 \leq N \leq 10^5$
+\item $N$ 是一个整数。
+\item $c_1$ 和 $c_2$ 是小写英文字母。
+\item $S$ 是一个长度为 $N$ 的字符串，仅由小写英文字母组成。
+\end{itemize}
+\end{problem}

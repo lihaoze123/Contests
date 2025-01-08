@@ -1,0 +1,51 @@
+\begin{problem}{SPY}{标准输入}{标准输出}{1 s}{256 MB}
+The National Intelligence Council of $X$ Nation receives a piece of credible information that Nation $Y$ will send spies to steal Nation $X$'s confidential paper. So the commander of The National Intelligence Council takes measures immediately, he will investigate people who will come into Nation $X$. At the same time, there are two lists in the Commander's hand, one is full of spies that Nation $Y$ will send to Nation $X$, and the other one is full of spies that Nation $X$ has sent to Nation $Y$ before. There may be some overlaps of the two lists. Because the spy may act two roles at the same time, which means that he may be the one that is sent from Nation $X$ to Nation $Y$, we just call this type a "dual-spy". So Nation $Y$ may send "dual-spy" back to Nation $X$, and it is obvious now that it is good for Nation $X$, because "dual-spy" may bring back Nation $Y$'s confidential paper without worrying about being detained by Nation $Y$'s frontier. So the commander decides to seize those that are sent by Nation $Y$, and let the ordinary people and the "dual-spy" in at the same time. So can you decide a list that should be caught by the Commander? 
+
+A: The list contains all people who will come to Nation $X$'s frontier. 
+
+B: The list contains spies that will be sent by Nation $Y$. 
+
+C: The list contains spies that were sent to Nation $Y$ before.
+    \InputFile
+The input consists of several test cases. Each test case is formatted as follows:
+
+The first line contains three positive integers $A$, $B$, and $C$ $(1 \leq A,B,C \leq 100)$:
+\begin{itemize}
+    \item $A$ - the number of people who will arrive at the frontier
+    \item $B$ - the number of spies that Nation Y will send
+    \item $C$ - the number of spies that Nation X has previously sent to Nation Y
+\end{itemize}
+
+The next three lines contain the lists of names:
+\begin{itemize}
+    \item Line 1: $A$ space-separated strings - names of people who will arrive at the frontier
+    \item Line 2: $B$ space-separated strings - names of spies from Nation Y
+    \item Line 3: $C$ space-separated strings - names of "dual-spies" (Nation X's spies)
+\end{itemize}
+
+Each name consists of lowercase English letters and has length between 1 and 10.
+No name appears twice in the same list. If the same name appears in different lists, it refers to the same person.
+
+A blank line separates consecutive test cases.
+
+    \OutputFile
+Output the list that the commander should caught (in the appearance order of the lists B).if no one should be caught, then , you should output “No enemy spy”
+
+    \Example
+
+    \begin{example}
+\exmp{
+8 4 3
+Zhao Qian Sun Li Zhou Wu Zheng Wang
+Zhao Qian Sun Li
+Zhao Zhou Zheng
+2 2 2
+Zhao Qian
+Zhao Qian
+Zhao Qian
+}{
+Qian Sun Li
+No enemy spy
+} %
+    \end{example}
+\end{problem}
