@@ -8,8 +8,10 @@ int main(int argc, char *argv[]) {
     std::string S = rnd.next("[a-z]{" + std::to_string(N) + "}");
     std::string T = S;
 
-    if (rnd.next(0, 1)) {
-        shuffle(T.begin(), T.end());
+    if (rnd.next(0, 100) >= 80) {
+        int a = rnd.next(0, N - 1);
+        int b = rnd.next(0, N - 1);
+        std::swap(T[a], T[b]);
     } else {
         T = rnd.next("[a-z]{" + std::to_string(N) + "}");
     }
