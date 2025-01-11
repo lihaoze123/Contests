@@ -1,0 +1,72 @@
+\begin{problem}{Cuboid Sum Query}{标准输入}{标准输出}{3 s}{1024 MB}
+You are given a positive integer $N$, and an integer $A_{x,y,z}$ for each triple of integers $(x, y, z)$ such that $1 \leq x, y, z \leq N$.
+
+You will be given $Q$ queries in the following format, which must be processed in order.
+
+For the $i$\-th query $(1 \leq i \leq Q)$, you are given a tuple of integers $(Lx_i, Rx_i, Ly_i, Ry_i, Lz_i, Rz_i)$ such that $1 \leq Lx_i \leq Rx_i \leq N$, $1 \leq Ly_i \leq Ry_i \leq N$, and $1 \leq Lz_i \leq Rz_i \leq N$. Find:
+
+$\displaystyle{\sum_{x=Lx_i}^{Rx_i} \sum_{y=Ly_i}^{Ry_i} \sum_{z=Lz_i}^{Rz_i} A_{x,y,z}}$.
+
+\InputFile
+The input is given from Standard Input in the following format:
+
+$$
+{\fontsize{10pt}{10pt}\selectfont
+\begin{aligned}
+& N \\
+& A_{1,1,1} \quad A_{1,1,2} \quad \ldots \quad A_{1,1,N} \\
+& A_{1,2,1} \quad A_{1,2,2} \quad \ldots \quad A_{1,2,N} \\
+& \vdots \\
+& A_{1,N,1} \quad A_{1,N,2} \quad \ldots \quad A_{1,N,N} \\
+& A_{2,1,1} \quad A_{2,1,2} \quad \ldots \quad A_{2,1,N} \\
+& A_{2,2,1} \quad A_{2,2,2} \quad \ldots \quad A_{2,2,N} \\
+& \vdots \\
+& A_{2,N,1} \quad A_{2,N,2} \quad \ldots \quad A_{2,N,N} \\
+& \vdots \\
+& A_{N,1,1} \quad A_{N,1,2} \quad \ldots \quad A_{N,1,N} \\
+& A_{N,2,1} \quad A_{N,2,2} \quad \ldots \quad A_{N,2,N} \\
+& \vdots \\
+& A_{N,N,1} \quad A_{N,N,2} \quad \ldots \quad A_{N,N,N} \\
+& Q \\
+& Lx_1 \quad Rx_1 \quad Ly_1 \quad Ry_1 \quad Lz_1 \quad Rz_1 \\
+& Lx_2 \quad Rx_2 \quad Ly_2 \quad Ry_2 \quad Lz_2 \quad Rz_2 \\
+& \vdots \\
+& Lx_Q \quad Rx_Q \quad Ly_Q \quad Ry_Q \quad Lz_Q \quad Rz_Q
+\end{aligned}
+} %
+$$
+
+\OutputFile
+Print $Q$ lines. The $i$\-th line should contain the answer to the $i$\-th query.
+
+\Example
+
+\begin{example}
+\exmp{
+2
+1 2
+3 4
+5 6
+7 8
+2
+1 2 2 2 1 1
+2 2 1 2 1 2
+}{
+10
+26
+} %
+\end{example}
+
+\Constraints
+
+\begin{itemize}
+    \item $1 \leq N \leq 100$
+    \item $1 \leq Q \leq 2 \times 10^{5}$
+    \item $0 \leq A_{x,y,z} \leq 999$ $(1 \leq x, y, z \leq N)$
+    \item $1 \leq Lx_i \leq Rx_i \leq N$ $(1 \leq i \leq Q)$
+    \item $1 \leq Ly_i \leq Ry_i \leq N$ $(1 \leq i \leq Q)$
+    \item $1 \leq Lz_i \leq Rz_i \leq N$ $(1 \leq i \leq Q)$
+    \item All input values are integers.
+\end{itemize}
+
+\end{problem}

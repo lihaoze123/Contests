@@ -1,0 +1,51 @@
+\begin{problem}{Strawberries}{标准输入}{标准输出}{1 s}{256 MB}
+Takahashi has $N$ teeth arranged in a single row from left to right. The current condition of his teeth is represented by a string $S$ of length $N$.
+
+If the $i$-th character of $S$ is \texttt{O}, it means that the $i$-th tooth from the left is healthy. If it is \texttt{X}, it means that the $i$-th tooth has a cavity. Healthy teeth do not have cavities.
+
+When he has $K$ consecutive healthy teeth, he can eat one strawberry using those $K$ teeth. After eating a strawberry, those $K$ teeth develop cavities and become unhealthy.
+
+Find the maximum number of strawberries he can eat.
+
+\InputFile
+The first line contains two integers $N$ and $K$ ($1 \leq N \leq 10^5$, $1 \leq K \leq N$).
+
+The second line contains a string $S$ of length $N$.
+
+\OutputFile
+Print the maximum number of strawberries he can eat.
+
+\Example
+
+\begin{example}
+\exmp{
+7 3
+OOXOOOO
+}{
+1
+} %
+\exmp{
+12 2
+OXXOOOXOOOOX
+}{
+3
+} %
+\exmp{
+22 5
+XXOOOOOOOOXXOOOOOXXXXX
+}{
+2
+} %
+\end{example}
+
+\Note
+In the first example: He can eat one strawberry by using the three consecutive healthy teeth from the 4th to 6th tooth from the left. After this, he cannot eat any more strawberries. Besides, there is no way for him to eat more than one strawberry. Therefore, print $1$.
+
+\Constraints
+\begin{itemize}
+\item $1 \leq K \leq N \leq 10^5$
+\item $N$ and $K$ are integers.
+\item $S$ is a string of length $N$ consisting of `O` and `X`.
+\end{itemize}
+
+\end{problem}

@@ -11,5 +11,4 @@
 *.toc
 gen
 sol
-*.in
-*.out
+.testcases
