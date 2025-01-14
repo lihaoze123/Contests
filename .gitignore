@@ -9,6 +9,7 @@
 *.pdf
 *.synctex.gz
 *.toc
+validator
 gen
 sol
 .testcases

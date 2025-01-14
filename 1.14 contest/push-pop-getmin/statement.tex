@@ -1,0 +1,22 @@
+% Name
+Push-Pop-GetMin
+
+% Legend
+实现一个栈，支持 \texttt{Push} (入栈)、\texttt{Pop} (出栈并输出栈顶)、\texttt{GetMin} (查询栈中最小值) 三个操作，要求时间复杂度为 $O(1)$。
+
+% Input format
+输入第一行包含一个整数 $n \ (1 \leq n \leq 10^5)$，表示操作的次数。
+
+接下来 $n$ 行，每行包含一个操作，格式为：
+\begin{itemize}
+    \item $1 \ x$：\texttt{Push} 操作，将 $x \ (1 \le x \le 100)$ 入栈。
+    \item $2$：\texttt{Pop} 操作，弹出栈顶并输出栈顶。
+    \item $3$：\texttt{GetMin} 操作，查询栈中最小值，若栈为空，则输出 $-1$。
+\end{itemize}
+
+% Output format
+对于每个 \texttt{Pop} 操作，输出一行一个整数，表示栈顶元素。
+对于每个 \texttt{GetMin} 操作，输出一行一个整数，表示栈中最小值。
+
+% Notes
+数据保证对于每个 \texttt{Pop} 操作，栈不为空。
