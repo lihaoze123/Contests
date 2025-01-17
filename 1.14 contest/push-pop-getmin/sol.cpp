@@ -28,7 +28,7 @@ int main() {
                 stk2.push_back(x);
             }
         } else if (op == 2) {
-            std::cout << stk2.back() << '\n';
+            std::cout << stk1.back() << '\n';
             stk1.pop_back();
             stk2.pop_back();
         } else {
